@@ -1,11 +1,7 @@
-add_library(RSA-IO
+add_library(CLI-IO
         cli.cpp
         helper.cpp
 )
 
-target_link_libraries(RSA-IO
-        PRIVATE
-        RSA-Core
-)
-
-target_link_libraries(RSA-Core PUBLIC Base256)
+# Add src directory to path for header includes
+target_include_directories(CLI-IO PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

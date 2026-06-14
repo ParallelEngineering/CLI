@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.20)
-project(RSA-Encryptor CXX)
+cmake_minimum_required(VERSION 3.28.3)
+project(CLI)
 
-add_subdirectory(core)
-add_subdirectory(io)
+# Enforce C++20 and disable compiler-specific extensions
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(RSA-Encryptor main.cpp)
-
-target_link_libraries(RSA-Encryptor PRIVATE Base256 RSA-IO)
+add_subdirectory(src)

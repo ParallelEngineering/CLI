@@ -1,9 +1,9 @@
-#include "../cli.h"
+#include "cli.h"
 
 #include <iostream>
 
 #include "../core/keyPair.h"
-#include "../helper.h"
+#include "helper.h"
 
 void cli::help() { std::cout << "Welcome to RSA-Encryptor" << std::endl; }
 
